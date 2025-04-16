@@ -5,6 +5,7 @@ on:
     paths-ignore:
       - "ui/**"
       - "docs/**"
+  workflow_dispatch:
 
 permissions:
   packages: write
