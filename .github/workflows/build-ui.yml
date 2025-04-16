@@ -11,6 +11,7 @@ on:
       - "docs/**"
       - "requirements.txt"
       - "requirements-dev.txt"
+  workflow_dispatch:
 
 permissions:
   packages: write
