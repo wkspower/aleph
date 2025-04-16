@@ -11,7 +11,7 @@ services:
       POSTGRES_DATABASE: aleph
 
   elasticsearch:
-    image: ghcr.io/alephdata/aleph-elasticsearch:3bb5dbed97cfdb9955324d11e5c623a5c5bbc410
+    image: ghcr.io/wkspower/aleph-elasticsearch:3bb5dbed97cfdb9955324d11e5c623a5c5bbc410
     hostname: elasticsearch
     environment:
       - discovery.type=single-node
@@ -33,7 +33,7 @@ services:
       - rabbitmq-data:/var/lib/rabbitmq/
       
   ingest-file:
-    image: ghcr.io/alephdata/ingest-file:4.0.1
+    image: ghcr.io/wkspower/ingest-file:4.0.1
     tmpfs:
       - /tmp:mode=777
     volumes:
@@ -46,7 +46,7 @@ services:
       - aleph.env
 
   worker:
-    image: ghcr.io/alephdata/aleph:${ALEPH_TAG:-4.0.2}
+    image: ghcr.io/wkspower/aleph:${ALEPH_TAG:-4.0.2}
     command: aleph worker
     restart: on-failure
     depends_on:
@@ -62,7 +62,7 @@ services:
       - aleph.env
 
   shell:
-    image: ghcr.io/alephdata/aleph:${ALEPH_TAG:-4.0.2}
+    image: ghcr.io/wkspower/aleph:${ALEPH_TAG:-4.0.2}
     command: /bin/bash
     depends_on:
       - postgres
@@ -80,7 +80,7 @@ services:
       - aleph.env
 
   api:
-    image: ghcr.io/alephdata/aleph:${ALEPH_TAG:-4.0.2}
+    image: ghcr.io/wkspower/aleph:${ALEPH_TAG:-4.0.2}
     expose:
       - 8000
     depends_on:
@@ -97,7 +97,7 @@ services:
       - aleph.env
 
   ui:
-    image: ghcr.io/alephdata/aleph-ui-production:${ALEPH_TAG:-4.0.2}
+    image: ghcr.io/wkspower/aleph-ui-production:${ALEPH_TAG:-4.0.2}
     depends_on:
       - api
     ports:
