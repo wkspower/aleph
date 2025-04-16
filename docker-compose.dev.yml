@@ -13,7 +13,7 @@ services:
       POSTGRES_DATABASE: aleph
 
   elasticsearch:
-    image: ghcr.io/wkspower/aleph-elasticsearch:3bb5dbed97cfdb9955324d11e5c623a5c5bbc410
+    image: ghcr.io/wkspower/aleph-elasticsearch:534cb1ec8b472ffdbf2a5662eea78dbca92604d6
     restart: on-failure
     environment:
       - discovery.type=single-node
