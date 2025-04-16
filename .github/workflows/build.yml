@@ -28,7 +28,6 @@ jobs:
       - name: Docker pull services
         run: |
           docker compose pull --quiet elasticsearch ingest-file
-          make ALEPH_TAG=${GITHUB_SHA} services
 
       - name: Build docker image
         run: docker build -t ghcr.io/wkspower/aleph:${GITHUB_SHA} .
