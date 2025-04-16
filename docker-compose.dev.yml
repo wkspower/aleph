@@ -13,7 +13,7 @@ services:
       POSTGRES_DATABASE: aleph
 
   elasticsearch:
-    image: ghcr.io/alephdata/aleph-elasticsearch:3bb5dbed97cfdb9955324d11e5c623a5c5bbc410
+    image: ghcr.io/wkspower/aleph-elasticsearch:3bb5dbed97cfdb9955324d11e5c623a5c5bbc410
     restart: on-failure
     environment:
       - discovery.type=single-node
@@ -43,14 +43,14 @@ services:
       - rabbitmq-data:/var/lib/rabbitmq/
 
   convert-document:
-    image: ghcr.io/alephdata/convert-document:latest
+    image: ghcr.io/wkspower/convert-document:latest
     read_only: true
     restart: on-failure
     user: app
     tmpfs: /tmp
 
   ingest-file:
-    image: ghcr.io/alephdata/ingest-file:4.0.1
+    image: ghcr.io/wkspower/ingest-file:4.0.1
     # build:
     #   context: ../ingest-file
     hostname: ingest
@@ -83,7 +83,7 @@ services:
   app:
     build:
       context: .
-    image: ghcr.io/alephdata/aleph:${ALEPH_TAG:-latest}
+    image: ghcr.io/wkspower/aleph:${ALEPH_TAG:-latest}
     hostname: aleph
     command: /bin/bash
     depends_on:
@@ -112,7 +112,7 @@ services:
   api:
     build:
       context: .
-    image: ghcr.io/alephdata/aleph:${ALEPH_TAG:-latest}
+    image: ghcr.io/wkspower/aleph:${ALEPH_TAG:-latest}
     command: python3 -m debugpy --listen 0.0.0.0:5678 -m flask run -h 0.0.0.0 -p 5000 --with-threads --reload --debugger
     ports:
       - "127.0.0.1:5000:5000"
@@ -140,7 +140,7 @@ services:
   ui:
     build:
       context: ui
-    image: ghcr.io/alephdata/aleph-ui:${ALEPH_TAG:-latest}
+    image: ghcr.io/wkspower/aleph-ui:${ALEPH_TAG:-latest}
     depends_on:
       - api
     command: "bash -c 'rsync --archive --inplace --no-compress --whole-file /node_modules /alephui && npm run start'"
@@ -161,7 +161,7 @@ services:
   worker:
     build:
       context: .
-    image: alephdata/aleph:${ALEPH_TAG:-latest}
+    image: wkspower/aleph:${ALEPH_TAG:-latest}
     command: aleph worker
     restart: on-failure
     depends_on:
