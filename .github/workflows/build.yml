@@ -1,10 +1,6 @@
 name: Build
 
 on:
-  push:
-    paths-ignore:
-      - "ui/**"
-      - "docs/**"
   workflow_dispatch:
 
 permissions:

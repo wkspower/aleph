@@ -1,16 +1,6 @@
 name: Build UI
 
 on:
-  push:
-    paths-ignore:
-      - "aleph/**"
-      - "contrib/**"
-      - "helm/**"
-      - "mappings/**"
-      - "site/**"
-      - "docs/**"
-      - "requirements.txt"
-      - "requirements-dev.txt"
   workflow_dispatch:
 
 permissions:
