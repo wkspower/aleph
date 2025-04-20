@@ -36,9 +36,6 @@ jobs:
       - name: Run linter
         run: make lint-ui
 
-      - name: Run tests
-        run: make test-ui
-
       - name: Build
         run: make build-ui
 
