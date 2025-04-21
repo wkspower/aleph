@@ -8,6 +8,7 @@ _PROM_MULTIPROC_DIR = os.environ.get("PROMETHEUS_MULTIPROC_DIR", None)
 wsgi_app = "aleph.wsgi:app"
 bind = "0.0.0.0:8000"
 timeout = 3600
+forwarded_allow_ips = "*"
 
 if _PROM_ENABLED:
     # Gunicorn will bind to port 8000 (the default, publicly exposed port)
