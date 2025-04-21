@@ -9,6 +9,10 @@ on:
       - "docs/**"
   workflow_dispatch:
 
+env:
+  REGISTRY: ghcr.io
+  REPOSITORY_OWNER: wkspower
+
 permissions:
   packages: write
 
@@ -19,43 +23,39 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       - name: Set up
         run: |
           sudo sysctl -w vm.max_map_count=262144
           sudo echo "ALEPH_SECRET=batman\n" >> aleph.env
-          echo "${GITHUB_REF}"
-          docker --version
-          docker compose --version
 
-      - name: Docker pull services
+      - name: Extract tag or fallback
+        id: extract_tag
         run: |
-          docker compose pull --quiet elasticsearch ingest-file
-          make ALEPH_TAG=${GITHUB_SHA} services
+          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            TAG_NAME="${GITHUB_REF#refs/tags/}"
+          else
+            TAG_NAME=$(git describe --tags --exact-match 2>/dev/null || echo "latest")
+          fi
+          echo "TAG=$TAG_NAME" >> "$GITHUB_ENV"
+          echo "::set-output name=tag::$TAG_NAME"
 
-      - name: Build docker image
-        run: docker build -t ghcr.io/wkspower/aleph:${GITHUB_SHA} .
-
-      - name: Install development dependencies
-        run: make dev
-        env:
-          PIP_BREAK_SYSTEM_PACKAGES: 1
-
-      - name: Check code formatting
-        run: make format-check
-
-      - name: Run linter
-        run: make lint
-
-      - name: Push docker images for tags
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
-        run: |
-          echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
-          export ALEPH_TAG=${GITHUB_REF/refs\/tags\//}
-          docker tag ghcr.io/wkspower/aleph:${GITHUB_SHA} ghcr.io/wkspower/aleph:${ALEPH_TAG};
-          docker push ghcr.io/wkspower/aleph:${ALEPH_TAG};
-
-      - name: Tag latest image
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags') && !startsWith(github.ref, 'refs/tags/test-')
-        run: |
-          docker tag ghcr.io/wkspower/aleph:${GITHUB_SHA} ghcr.io/wkspower/aleph:latest;
-          docker push ghcr.io/wkspower/aleph:latest;
+      - name: Log in to the Container registry
+        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+  
+      - name: Build, tag and push latest image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          file: Dockerfile
+          push: true
+          tags: |
+            "ghcr.io/wkspower/aleph:${{ steps.extract_tag.outputs.tag }}"
+            "ghcr.io/wkspower/aleph:latest"
