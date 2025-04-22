@@ -32,6 +32,7 @@ class Cache(object):
         return self.set(key, value, expires=expires)
 
     def set_list(self, key, values, expires=None):
+        values = [v for v in values if v is not None]
         self.kv.delete(key)
         if len(values):
             self.kv.rpush(key, *values)
