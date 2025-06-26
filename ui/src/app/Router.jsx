@@ -168,7 +168,7 @@ class Router extends Component {
             <Route path="settings" element={<SettingsScreen />} />
             <Route path="status" element={<SystemStatusScreen />} />
             <Route path="groups/:groupId" element={<GroupScreen />} />
-            <Route path="/" element={<HomeScreen />} />
+            <Route path="/" element={<SearchScreen />} />
             {legacyRedirects}
             <Route path="*" element={<NotFoundScreen />} />
           </Routes>
