@@ -32,6 +32,7 @@ import {
 } from 'components/common';
 import getPageLink from 'util/getPageLink';
 import { entitiesQuery } from 'queries';
+import { AnchorButton } from '@blueprintjs/core';
 
 import './Navbar.scss';
 
@@ -187,6 +188,15 @@ export class Navbar extends React.Component {
               )}
               {!mobileSearchOpen && (
                 <>
+                  <AnchorButton
+                    href="https://app.enlightenintel.dev/"
+                    icon="home"
+                    minimal={true}
+                    className="Navbar_collections-button"
+                  >
+                    Home
+                  </AnchorButton>                
+
                   <LinkButton
                     to="/datasets"
                     icon="database"
