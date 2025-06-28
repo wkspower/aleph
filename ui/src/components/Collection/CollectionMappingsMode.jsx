@@ -50,7 +50,7 @@ class CollectionMappingsMode extends React.Component {
                   >
                     <FormattedMessage
                       id="mapping.docs.link"
-                      defaultMessage="Aleph user guide"
+                      defaultMessage="Theia user guide"
                     />
                   </a>
                 ),

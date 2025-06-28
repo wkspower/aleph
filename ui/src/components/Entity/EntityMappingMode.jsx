@@ -130,7 +130,7 @@ export class EntityMappingMode extends Component {
                   >
                     <FormattedMessage
                       id="mapping.info.link"
-                      defaultMessage="Aleph user guide"
+                      defaultMessage="Theia user guide"
                     />
                   </a>
                 ),

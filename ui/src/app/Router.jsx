@@ -103,7 +103,7 @@ class Router extends Component {
             <p className={Classes.TEXT_LARGE}>
               <FormattedMessage
                 id="router.error.message"
-                defaultMessage="Sorry, something went wrong and Aleph couldn’t load. Please try again in a few minutes or contact an administrator if the error persists."
+                defaultMessage="Sorry, something went wrong and Theia couldn’t load. Please try again in a few minutes or contact an administrator if the error persists."
               />
             </p>
             <Button large icon="reset" onClick={() => window.location.reload()}>

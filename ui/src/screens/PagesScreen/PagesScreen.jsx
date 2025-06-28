@@ -14,6 +14,7 @@ import { selectPages, selectPage } from 'selectors';
 
 import './PagesScreen.scss';
 import getPageLink from '../../util/getPageLink';
+import { is } from 'date-fns/locale';
 
 const messages = defineMessages({
   not_found: {
@@ -37,19 +38,25 @@ export class PagesScreen extends React.Component {
       .sort((a, b) => a.short.localeCompare(b.short));
 
     const contentDir = isLangRtl(page.lang) ? 'rtl' : 'ltr';
+    const title = page.title.replaceAll("Aleph", "Theia");
+    const isAbout = page.name === "about" || false;
+    const content = isAbout ?
+    "Theia operationalizes intelligence as a learning system, bridging human tradecraft with data-driven insight, reducing friction across the intelligence lifecycle, and enabling teams to act with precision in a rapidly evolving threat landscape. It embodies the future of intelligence platforms: rigorous, flexible, and analysis-first.":
+    page.content;
 
     return (
-      <Screen title={page.title} exemptFromRequiredAuth>
+      <Screen title={title} exemptFromRequiredAuth>
         <div className="Pages">
           <div className="Pages__body">
             <h5 className="Pages__title" dir={contentDir}>
-              {page.title}
+              {title}
             </h5>
             <div className="Pages__content-container">
               <div className="Pages__content" dir={contentDir}>
-                <ReactMarkdown>{page.content}</ReactMarkdown>
+                <ReactMarkdown>{content}</ReactMarkdown>
               </div>
               <div className="Pages__menu">
+                {!isAbout && (
                 <Menu>
                   {menuPages.map((menuPage) => (
                     <LinkMenuItem
@@ -63,6 +70,7 @@ export class PagesScreen extends React.Component {
                   <MenuDivider />
                   <AppItem />
                 </Menu>
+                )}
               </div>
             </div>
           </div>

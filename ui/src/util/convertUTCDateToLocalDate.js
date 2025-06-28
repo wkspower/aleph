@@ -1,4 +1,4 @@
-// The Aleph API returns dates as ISO strings without timezone
+// The Theia API returns dates as ISO strings without timezone
 // designators. When initializing new `Date` objects, those dates
 // will by default be initialized with the local timezone of the
 // user agent.

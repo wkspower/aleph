@@ -50,7 +50,7 @@ const messages = defineMessages({
   xref_description: {
     id: 'collection.info.xref_description',
     defaultMessage:
-      'Cross-referencing allows you to search the rest of Aleph for entities similar to those contained in your investigation.',
+      'Cross-referencing allows you to search the rest of Theia for entities similar to those contained in your investigation.',
   },
   search: {
     id: 'collection.info.search',
@@ -84,7 +84,7 @@ const messages = defineMessages({
   mentions_description: {
     id: 'collection.info.mentions_description',
     defaultMessage:
-      'Aleph automatically extracts terms that resemble names, address, phone numbers, and email addresses from uploaded documents and entities within your investigation. {br}{br} Click on a mentioned term below to find where it appears in your investigation.',
+      'Theia automatically extracts terms that resemble names, address, phone numbers, and email addresses from uploaded documents and entities within your investigation. {br}{br} Click on a mentioned term below to find where it appears in your investigation.',
   },
   overview: {
     id: 'collection.info.overview',

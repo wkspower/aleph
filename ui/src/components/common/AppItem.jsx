@@ -14,7 +14,7 @@ class AppItem extends PureComponent {
     const message = (
       <FormattedMessage
         id="footer.aleph"
-        defaultMessage="Aleph {version}"
+        defaultMessage="Theia {version}"
         values={{
           version: app.version,
         }}

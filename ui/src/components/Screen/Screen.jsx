@@ -52,7 +52,7 @@ export class Screen extends React.Component {
     }
 
     const titleTemplate = hasMetadata ? `%s - ${metadata.app.title}` : '%s';
-    const defaultTitle = hasMetadata ? metadata.app.title : 'Aleph';
+    const defaultTitle = hasMetadata ? metadata.app.title : 'Theia';
 
     return (
       <div className={c('Screen', className)}>

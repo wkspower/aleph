@@ -72,7 +72,7 @@ it('renders successfully with only a body', () => {
 
 it('renders latest update', () => {
   const message = {
-    safeHtmlBody: 'Aleph will be down for maintenance on Sunday.',
+    safeHtmlBody: 'Theia will be down for maintenance on Sunday.',
     createdAt: '2022-01-01T00:00:00.000Z',
     updates: [
       {

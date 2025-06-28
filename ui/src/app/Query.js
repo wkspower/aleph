@@ -6,7 +6,7 @@ import { getGroupField } from 'components/SearchField/util';
 class Query {
   // State of a particular API query. This doesn't need to be specific to any one
   // of the APIs (entities, documents, collections, roles), but just serves as a
-  // container for the default syntax of Aleph.
+  // container for the default syntax of Theia.
   constructor(path, state, context = {}, queryName = '') {
     this.path = path;
     this.state = state;

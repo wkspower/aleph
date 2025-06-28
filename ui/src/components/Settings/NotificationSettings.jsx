@@ -41,7 +41,7 @@ export default function NotificationSettings() {
       <p>
         <FormattedMessage
           id="settings.notifications.text"
-          defaultMessage="Aleph can send you email notification when something happens in an investigation or dataset you have access to, for example when someone else uploads a new file."
+          defaultMessage="Theia can send you email notification when something happens in an investigation or dataset you have access to, for example when someone else uploads a new file."
         />
       </p>
 

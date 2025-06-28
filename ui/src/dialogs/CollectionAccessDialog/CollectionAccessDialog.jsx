@@ -229,7 +229,7 @@ class CollectionAccessDialog extends Component {
                     <Callout intent={Intent.WARNING}>
                       <FormattedMessage
                         id="collection.edit.permissions_warning"
-                        defaultMessage="Note: User must already have an Aleph account in order to receive access."
+                        defaultMessage="Note: User must already have an Theia account in order to receive access."
                       />
                     </Callout>
                   </td>

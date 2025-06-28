@@ -149,7 +149,7 @@ export default function ApiKeySettings() {
             hasExpired ? (
               <FormattedMessage
                 id="settings.api_key.text_regenerate_expired"
-                defaultMessage="Regenerate your API key in order to access the Aleph API."
+                defaultMessage="Regenerate your API key in order to access the Theia API."
               />
             ) : (
               <FormattedMessage
@@ -160,7 +160,7 @@ export default function ApiKeySettings() {
           ) : (
             <FormattedMessage
               id="settings.api_key.text_generate"
-              defaultMessage="You need an API key in order to access the Aleph API. Generate an API key to get started."
+              defaultMessage="You need an API key in order to access the Theia API. Generate an API key to get started."
             />
           )}
         </p>

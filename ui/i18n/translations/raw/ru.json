@@ -1389,7 +1389,7 @@
     "defaultMessage": "Вы уверены, что хотите удалить этот маппинг и все созданные сущности?"
   },
   "mapping.docs.link": {
-    "defaultMessage": "Aleph user guide"
+    "defaultMessage": "Theia user guide"
   },
   "mapping.entityAssign.helpText": {
     "defaultMessage": "Необходимо создать объект типа \"{range}\" для {property}"
@@ -1443,7 +1443,7 @@
     "defaultMessage": "Follow the steps below to map items in this investigation to structured entites. For more information, please refer to the {link}."
   },
   "mapping.info.link": {
-    "defaultMessage": "Aleph user guide"
+    "defaultMessage": "Theia user guide"
   },
   "mapping.keyAssign.additionalHelpText": {
     "defaultMessage": "Используйте колонки с идентификационными номерами, телефонными номерами, эл. адресами\n                и прочей уникальной информацией. Если колонки с уникальными значениями отсутствуют,\n                выберите одновременно несколько колонок, чтобы Алеф сгенерировал уникальные сущности из ваших данных."
@@ -1719,7 +1719,7 @@
     "defaultMessage": "Выберите пользователя"
   },
   "router.error.message": {
-    "defaultMessage": "Sorry, something went wrong and Aleph couldn’t load. Please try again in a few minutes or contact an administrator if the error persists."
+    "defaultMessage": "Sorry, something went wrong and Theia couldn’t load. Please try again in a few minutes or contact an administrator if the error persists."
   },
   "router.error.retry": {
     "defaultMessage": "Попробовать ещё раз"
@@ -1935,13 +1935,13 @@
     "defaultMessage": "Your API key expired on {date}, {time}."
   },
   "settings.api_key.text_generate": {
-    "defaultMessage": "You need an API key in order to access the Aleph API. Generate an API key to get started."
+    "defaultMessage": "You need an API key in order to access the Theia API. Generate an API key to get started."
   },
   "settings.api_key.text_regenerate": {
     "defaultMessage": "When you regenerate your API key, your old key will stop working."
   },
   "settings.api_key.text_regenerate_expired": {
-    "defaultMessage": "Regenerate your API key in order to access the Aleph API."
+    "defaultMessage": "Regenerate your API key in order to access the Theia API."
   },
   "settings.api_key.title": {
     "defaultMessage": "API key"
@@ -1977,7 +1977,7 @@
     "defaultMessage": "Your notification preferences have been updated."
   },
   "settings.notifications.text": {
-    "defaultMessage": "Aleph can send you email notification when something happens in an investigation or dataset you have access to, for example when someone else uploads a new file."
+    "defaultMessage": "Theia can send you email notification when something happens in an investigation or dataset you have access to, for example when someone else uploads a new file."
   },
   "settings.notifications.title": {
     "defaultMessage": "Уведомления"
@@ -2094,7 +2094,7 @@
     "defaultMessage": "Поиск наборов данных или расследований, относящихся к {group}..."
   },
   "ssettings.locale.text": {
-    "defaultMessage": "Change the language of the Aleph user interface."
+    "defaultMessage": "Change the language of the Theia user interface."
   },
   "status.last_updated_at": {
     "defaultMessage": "last updated"

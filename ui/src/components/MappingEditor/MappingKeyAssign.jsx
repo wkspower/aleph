@@ -114,7 +114,7 @@ export class MappingKeyAssignItem extends Component {
                 id="mapping.keyAssign.additionalHelpText"
                 defaultMessage={`The best keys are columns from your data that contain id numbers, phone numbers, email addresses,
                   or other uniquely identifying information. If no columns with unique values exist, select multiple columns to allow
-                  Aleph to generate unique entities correctly from your data.`}
+                  Theia to generate unique entities correctly from your data.`}
               />
             </Collapse>
             <Button

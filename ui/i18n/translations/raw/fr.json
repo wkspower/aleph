@@ -237,7 +237,7 @@
     "defaultMessage": "Résumé"
   },
   "collection.edit.permissions_warning": {
-    "defaultMessage": "Remarque : l’utilisateur doit déjà disposer d’un compte Aleph pour obtenir l’accès."
+    "defaultMessage": "Remarque : l’utilisateur doit déjà disposer d’un compte Theia pour obtenir l’accès."
   },
   "collection.edit.permissionstable.edit": {
     "defaultMessage": "Modifier"
@@ -324,7 +324,7 @@
     "defaultMessage": "Mentions"
   },
   "collection.info.mentions_description": {
-    "defaultMessage": "Aleph extrait automatiquement les termes qui ressemblent à des noms, des adresses, des numéros de téléphone et des adresses e-mail à partir des documents et des entités envoyés dans votre enquête. {br}{br} Cliquez sur un terme mentionné ci-dessous pour savoir où il apparaît dans votre enquête."
+    "defaultMessage": "Theia extrait automatiquement les termes qui ressemblent à des noms, des adresses, des numéros de téléphone et des adresses e-mail à partir des documents et des entités envoyés dans votre enquête. {br}{br} Cliquez sur un terme mentionné ci-dessous pour savoir où il apparaît dans votre enquête."
   },
   "collection.info.overview": {
     "defaultMessage": "Vue d’ensemble"
@@ -351,7 +351,7 @@
     "defaultMessage": "Références croisées"
   },
   "collection.info.xref_description": {
-    "defaultMessage": "Les références croisées vous permettent de rechercher dans le reste d’Aleph des entités similaires à celles qui figurent dans votre enquête."
+    "defaultMessage": "Les références croisées vous permettent de rechercher dans le reste d’Theia des entités similaires à celles qui figurent dans votre enquête."
   },
   "collection.info_url": {
     "defaultMessage": "URL des informations"
@@ -657,7 +657,7 @@
     "defaultMessage": "Report a problem"
   },
   "document.report_problem.text": {
-    "defaultMessage": "You can now easily report such problems to the Aleph team. This helps us improve how Aleph processes and displays documents."
+    "defaultMessage": "You can now easily report such problems to the Theia team. This helps us improve how Theia processes and displays documents."
   },
   "document.report_problem.title": {
     "defaultMessage": "Does the document preview look strange? Is the extracted text incorrect, or is the information incomplete?"
@@ -1125,7 +1125,7 @@
     "defaultMessage": "Erreur d’import de fichier"
   },
   "footer.aleph": {
-    "defaultMessage": "Aleph {version}"
+    "defaultMessage": "Theia {version}"
   },
   "footer.ftm": {
     "defaultMessage": "FollowTheMoney {version}"
@@ -1389,7 +1389,7 @@
     "defaultMessage": "Voulez-vous vraiment supprimer cette cartographie et toutes les entités générées ?"
   },
   "mapping.docs.link": {
-    "defaultMessage": "Aleph user guide"
+    "defaultMessage": "Theia user guide"
   },
   "mapping.entityAssign.helpText": {
     "defaultMessage": "Vous devez créer un objet de type « {range} » comme {property}"
@@ -1443,10 +1443,10 @@
     "defaultMessage": "Follow the steps below to map items in this investigation to structured entites. For more information, please refer to the {link}."
   },
   "mapping.info.link": {
-    "defaultMessage": "Aleph user guide"
+    "defaultMessage": "Theia user guide"
   },
   "mapping.keyAssign.additionalHelpText": {
-    "defaultMessage": "Les meilleures clés sont les colonnes issues de vos données qui contiennent des numéros d’identifiant, des numéros de téléphone, des adresses e-mail ou toute autre information d’identification unique. En l’absence de colonne contenant des données uniques, sélectionnez plusieurs colonnes pour permettre à Aleph de générer correctement des entités uniques à partir de vos données."
+    "defaultMessage": "Les meilleures clés sont les colonnes issues de vos données qui contiennent des numéros d’identifiant, des numéros de téléphone, des adresses e-mail ou toute autre information d’identification unique. En l’absence de colonne contenant des données uniques, sélectionnez plusieurs colonnes pour permettre à Theia de générer correctement des entités uniques à partir de vos données."
   },
   "mapping.keyAssign.additionalHelpToggle.less": {
     "defaultMessage": "Moins"
@@ -1719,7 +1719,7 @@
     "defaultMessage": "Choisir un utilisateur"
   },
   "router.error.message": {
-    "defaultMessage": "Sorry, something went wrong and Aleph couldn’t load. Please try again in a few minutes or contact an administrator if the error persists."
+    "defaultMessage": "Sorry, something went wrong and Theia couldn’t load. Please try again in a few minutes or contact an administrator if the error persists."
   },
   "router.error.retry": {
     "defaultMessage": "Réessayer"
@@ -1935,13 +1935,13 @@
     "defaultMessage": "Your API key expired on {date}, {time}."
   },
   "settings.api_key.text_generate": {
-    "defaultMessage": "You need an API key in order to access the Aleph API. Generate an API key to get started."
+    "defaultMessage": "You need an API key in order to access the Theia API. Generate an API key to get started."
   },
   "settings.api_key.text_regenerate": {
     "defaultMessage": "When you regenerate your API key, your old key will stop working."
   },
   "settings.api_key.text_regenerate_expired": {
-    "defaultMessage": "Regenerate your API key in order to access the Aleph API."
+    "defaultMessage": "Regenerate your API key in order to access the Theia API."
   },
   "settings.api_key.title": {
     "defaultMessage": "API key"
@@ -1977,7 +1977,7 @@
     "defaultMessage": "Your notification preferences have been updated."
   },
   "settings.notifications.text": {
-    "defaultMessage": "Aleph can send you email notification when something happens in an investigation or dataset you have access to, for example when someone else uploads a new file."
+    "defaultMessage": "Theia can send you email notification when something happens in an investigation or dataset you have access to, for example when someone else uploads a new file."
   },
   "settings.notifications.title": {
     "defaultMessage": "Notifications"
@@ -2094,7 +2094,7 @@
     "defaultMessage": "Rechercher un ensemble de données ou une enquête appartenant à {group}..."
   },
   "ssettings.locale.text": {
-    "defaultMessage": "Change the language of the Aleph user interface."
+    "defaultMessage": "Change the language of the Theia user interface."
   },
   "status.last_updated_at": {
     "defaultMessage": "last updated"

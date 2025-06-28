@@ -46,7 +46,7 @@ export default function LanguageSettings() {
       <p>
         <FormattedMessage
           id="ssettings.locale.text"
-          defaultMessage="Change the language of the Aleph user interface."
+          defaultMessage="Change the language of the Theia user interface."
         />
       </p>
 

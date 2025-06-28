@@ -81,7 +81,7 @@ class PagingButtons extends React.Component {
         <p>
           <FormattedMessage
             id="document.report_problem.text"
-            defaultMessage="You can now easily report such problems to the Aleph team. This helps us improve how Aleph processes and displays documents."
+            defaultMessage="You can now easily report such problems to the Theia team. This helps us improve how Theia processes and displays documents."
           />
         </p>
       </>
