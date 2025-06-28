@@ -32,18 +32,6 @@ class AppItem extends PureComponent {
 
     return (
       <>
-        <MenuItem
-          className={Classes.TEXT_DISABLED}
-          icon="code"
-          text={message}
-          href="https://docs.aleph.occrp.org"
-        />
-        <MenuItem
-          className={Classes.TEXT_DISABLED}
-          icon="code"
-          text={ftmMessage}
-          href="https://followthemoney.tech"
-        />
       </>
     );
   }
