@@ -186,8 +186,6 @@ class Dashboard extends React.Component {
                 to="/settings"
                 active={current === '/settings'}
               />
-              <MenuDivider />
-              <AppItem />
             </Menu>
           </div>
           <div className="Dashboard__body">{this.props.children}</div>
